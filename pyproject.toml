@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "aoc2015"
+version = "0.1.0"
+description = "Going back and doing old advent of code problems"
+authors = ["jbramley"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
