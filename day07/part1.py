@@ -13,7 +13,6 @@ class AndGate(Gate):
             self.inp.append(val)
             return None
         else:
-            print(f"{self.inp[0]:b} & {val:b} = {(self.inp[0] & val):b}")
             return self.out, self.inp[0] & val
 
 
@@ -89,12 +88,10 @@ def p1():
                     w[val].append(g)
 
     while signals:
-        print(signals)
         o, v = signals.pop()
         if o not in w:
             print(f"Wire {o} has value {v}")
             continue
-        print(f"sending {v} on {o} to {len(w[o])} gates")
         for g in w[o]:
             r = g.signal(v)
             if r is not None:
